@@ -5,6 +5,7 @@ import cors from 'cors';
 
 import dotenv from 'dotenv';
 
+// route
 import postsRoutes from './routes/posts.js';
 
 dotenv.config();
@@ -15,6 +16,9 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
 
 // route
+app.get('/', (req, res) => {
+    res.send('simple rest crud API');
+});
 app.use('/posts', postsRoutes);
 
 
