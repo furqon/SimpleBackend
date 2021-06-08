@@ -7,6 +7,7 @@ import dotenv from 'dotenv';
 
 // route
 import postsRoutes from './routes/posts.js';
+import userRoutes from './routes/users.js';
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
     res.send('simple rest crud API');
 });
 app.use('/posts', postsRoutes);
+app.use('/user', userRoutes);
 
 
 // mongoose
